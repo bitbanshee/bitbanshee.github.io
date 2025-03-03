@@ -69,14 +69,14 @@ params:
       <div>
 
       ![Foto pessoal que mostra apenas meu rosto e uma faixa muito pequena do busto. Sou uma travesti latina com pele morena clara. Não uso maquiagem. Meus olhos tem as íris castanhas escura, quase totalmente pretas. Tenho o cabelo comprido, ondulado, ruivo não natural (nesta foto), penteado com partição do lado direito. Uso óculos com aros em acetato transparente e pernas em acetato rosa pastel. Uso brincos de argolas em formato de coração, mas apenas o brinco do lado direito está à mostra. Estou usando um vestido roxo florido, porém só uma pequena faixa aparece na foto. O fundo é ignorável.](images/profile.jpeg)
-      {draggable="false" width="240" height="240" style="border-radius: 50%;"}
+      {draggable="false" style="width: 100%; max-width:240px; height: 100%; max-height: 240px; border-radius: 50%;"}
       
       </div>
 
       <div>
 
       ![Foto das minhas 3 gatas em cima da minha cama de casal. A cama é forrada por uma colcha branca com impressão de um padrão de silhuetas pretas de gatos. A gata laranja mais à frente é a Kim Petras. Logo atrás, a gata tricolor deitada é a Lilith. Ao fundo, deitada de barriga para cima, está a gata escaminha chamada Persephone.](images/cats.jpeg)
-      {draggable="false" width="240" height="240" style="border-radius: 50%;"}
+      {draggable="false" style="width: 100%; max-width:240px; height: 100%; max-height: 240px; border-radius: 50%;"}
 
       </div>
 
