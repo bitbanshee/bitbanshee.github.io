@@ -1,27 +1,155 @@
 baseURL: https://bibanshee.dev/
-defaultContentLanguage: pt
-defaultContentLanguageInSubdir: true
 title: bitbanshee
 theme: ["papermod"]
+defaultContentLanguage: pt
+defaultContentLanguageInSubdir: true
+enableRobotsTXT: true
+minify:
+  disableXML: true
+  minifyOutput: true
 languages:
   pt:
-    languageName: Português
+    languageName: ":brazil:"
     languageCode: pt-BR
     contentDir: content/pt
     weight: 1
+    params:
+      languageAltTitle: Português
   en:
     disabled: true
-    languageName: English
-    languageCode: pt-US
+    languageName: ":us:"
+    languageCode: en-US
     contentDir: content/en
     weight: 2
-# menu:
-#   main:
-#     - identifier: categories
-#       name: categories
-#       url: /categories/
-#       weight: 10
-#     - identifier: tags
-#       name: tags
-#       url: /tags/
-#       weight: 20
+    params:
+      languageAltTitle: English
+menu:
+  main:
+    # - identifier: blog
+    #   name: blog
+    #   url: posts/
+    #   weight: 1
+    - identifier: search
+      name: busca
+      url: search/
+      weight: 2
+    - identifier: tags
+      name: tags
+      url: tags/
+      weight: 3
+    - identifier: categories
+      name: categorias
+      url: categories/
+      weight: 4
+params:
+  env: production
+  title: bitbanshee
+  description: "Blog pessoal"
+  keywords:
+    - Blog
+  author:
+    - Sonia
+  DateFormat: "02/01/2006"
+  ShowReadingTime: true
+  # ShowShareButtons: true
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowWordCount: true
+  ShowCodeCopyButtons: true
+  ShowRssButtonInSectionTermList: true
+  # UseHugoToc: true
+  Showtoc: true
+  TocOpen: true
+  homeInfoParams:
+    content:  |
+      <div style="display: flex; flex-direction: row; align-items: start; gap: 2em;">
+
+      <div style="display: flex; flex-direction: column; align-items: start; gap: 1em; flex: 1; width: 100%;">
+      
+      <div>
+
+      ![Foto pessoal que mostra apenas meu rosto e uma faixa muito pequena do busto. Sou uma travesti latina com pele morena clara. Não uso maquiagem. Meus olhos tem as íris castanhas escura, quase totalmente pretas. Tenho o cabelo comprido, ondulado, ruivo não natural (nesta foto), penteado com partição do lado direito. Uso óculos com aros em acetato transparente e pernas em acetato rosa pastel. Uso brincos de argolas em formato de coração, mas apenas o brinco do lado direito está à mostra. Estou usando um vestido roxo florido, porém só uma pequena faixa aparece na foto. O fundo é ignorável.](images/profile.jpeg)
+      {draggable="false" width="240" height="240" style="border-radius: 50%;"}
+      
+      </div>
+
+      <div>
+
+      ![Foto das minhas 3 gatas em cima da minha cama de casal. A cama é forrada por uma colcha branca com impressão de um padrão de silhuetas pretas de gatos. A gata laranja mais à frente é a Kim Petras. Logo atrás, a gata tricolor deitada é a Lilith. Ao fundo, deitada de barriga para cima, está a gata escaminha chamada Persephone.](images/cats.jpeg)
+      {draggable="false" width="240" height="240" style="border-radius: 50%;"}
+
+      </div>
+
+      </div>
+
+      <div style="flex: 2;">
+
+      ## 👋🏽 Olá, seja bem-vinde!
+      <br>
+
+      Meu nome é **Sonia**.
+      <br>
+      <br>
+
+      Trabalho com tecnologia, atualmente como Engenheira de Software generalista. Moro em São Paulo. Grande parte da minha formação em computação foi informal, e sou graduada em Engenharia Elétrica. Também estudo, por hobby e necessidade, sobre formas de superar o capitalismo que incentivem a formação e o fortalecimento de comunidades.
+      <br>
+      <br>
+
+      Sou uma travesti autista e com altas habilidades e que não é muito fã de usar suas habilidades em projetos que alimentem o capitalismo. Sou mãe de 3 gatas: Kim Petras (laranja), Lilith (tricolor) e Persephone (escaminha).
+      <br>
+      <br>
+      
+      Aqui, você vai encontrar textos sobre tecnologia, política e quaisquer outros assuntos que eu julgue interessante.
+      <br>
+      <br>
+
+      Obrigada pela visita.
+      
+      </div>
+
+      </div>
+  socialIcons:
+    - name: Github
+      url: "https://github.com/bitbanshee"
+    - name: Bluesky
+      url: "https://bsky.app/profile/sonia.computer"
+    - name: Mastodon
+      url: "https://hachyderm.io/@bitbanshee"
+    - name: Signal
+      url: "https://signal.me/#eu/C56LxlRS4nntTEfW6j1a_D0Ax-NBw0rnHEhto3SlT0e1C6QXi6ZNwpw4pI9stUIj"
+    - name: Email
+      url: "mailto:hello@bitbanshee.dev"
+    - name: RSS
+      url: "posts/index.xml"
+  editPost:
+    URL: "https://github.com/bitbanshee/bitbanshee.github.io/tree/main/content/pt"
+    Text: "Quer sugerir algo?"
+    appendFilePath: true
+  fuseOpts:
+    useExtendedSearch: true
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+markup:
+  goldmark:
+    extensions:
+      extras:
+        delete:
+          enable: true
+        insert:
+          enable: true
+        mark:
+          enable: true
+        subscript:
+          enable: true
+        superscript:
+          enable: true
+    renderer:
+      unsafe: true
+    parser:
+      attribute:
+        block: true
+        title: true
+      wrapStandAloneImageWithinParagraph: false

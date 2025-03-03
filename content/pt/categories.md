@@ -1,0 +1,4 @@
+---
+Title: "Categorias"
+layout: "terms"
+---
