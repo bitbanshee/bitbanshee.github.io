@@ -61,53 +61,39 @@ params:
   Showtoc: true
   TocOpen: true
   homeInfoParams:
-    content:  |
-      <div style="display: flex; flex-direction: row; align-items: start; gap: 2em;">
-
-      <div style="display: flex; flex-direction: column; align-items: start; gap: 1em; flex: 1; width: 100%;">
-      
-      <div>
-
-      ![Foto pessoal que mostra apenas meu rosto e uma faixa muito pequena do busto. Sou uma travesti latina com pele morena clara. Não uso maquiagem. Meus olhos tem as íris castanhas escura, quase totalmente pretas. Tenho o cabelo comprido, ondulado, ruivo não natural (nesta foto), penteado com partição do lado direito. Uso óculos com aros em acetato transparente e pernas em acetato rosa pastel. Uso brincos de argolas em formato de coração, mas apenas o brinco do lado direito está à mostra. Estou usando um vestido roxo florido, porém só uma pequena faixa aparece na foto. O fundo é ignorável.](images/profile.jpeg)
-      {draggable="false" style="width: 100%; max-width:240px; height: 100%; max-height: 240px; aspect-ratio: 1 / 1; border-radius: 50%;"}
-      
-      </div>
-
-      <div>
-
-      ![Foto das minhas 3 gatas em cima da minha cama de casal. A cama é forrada por uma colcha branca com impressão de um padrão de silhuetas pretas de gatos. A gata laranja mais à frente é a Kim Petras. Logo atrás, a gata tricolor deitada é a Lilith. Ao fundo, deitada de barriga para cima, está a gata escaminha chamada Persephone.](images/cats.jpeg)
-      {draggable="false" style="width: 100%; max-width:240px; height: 100%; max-height: 240px; aspect-ratio: 1 / 1; border-radius: 50%;"}
-
-      </div>
-
-      </div>
-
-      <div style="flex: 2;">
-
-      ## 👋🏽 Olá, seja bem-vinde!
-      <br>
-
-      Meu nome é **Sonia**.
-      <br>
-      <br>
-
-      Trabalho com tecnologia, atualmente como Engenheira de Software generalista. Moro em São Paulo. Grande parte da minha formação em computação foi informal, e sou graduada em Engenharia Elétrica. Também estudo, por hobby e necessidade, sobre formas de superar o capitalismo que incentivem a formação e o fortalecimento de comunidades.
-      <br>
-      <br>
-
-      Sou uma travesti autista e com altas habilidades e que não é muito fã de usar suas habilidades em projetos que alimentem o capitalismo. Sou mãe de 3 gatas: Kim Petras (laranja), Lilith (tricolor) e Persephone (escaminha).
-      <br>
-      <br>
-      
-      Aqui, você vai encontrar textos sobre tecnologia, política e quaisquer outros assuntos que eu julgue interessante.
-      <br>
-      <br>
-
-      Obrigada pela visita.
-      
-      </div>
-
-      </div>
+    AlignSocialIconsTo: right
+    content:
+      text: |
+        ## 👋🏽 Olá, seja bem-vinde!
+        \
+        Meu nome é **Sonia**.
+        \
+        \
+        Trabalho com tecnologia, atualmente como Engenheira de Software generalista. Moro em São Paulo. Grande parte da minha formação em computação foi informal, e sou graduada em Engenharia Elétrica. Também estudo, por hobby e necessidade, sobre formas de superar o capitalismo que incentivem a formação e o fortalecimento de comunidades.
+        \
+        \
+        Sou uma travesti autista e com altas habilidades e que não é muito fã de usar suas habilidades em projetos que alimentem o capitalismo. Sou mãe de 3 gatas: Kim Petras (laranja), Lilith (tricolor) e Persephone (escaminha).
+        \
+        \
+        Aqui, você vai encontrar textos sobre tecnologia, política e quaisquer outros assuntos que eu julgue interessante.
+        \
+        \
+        Obrigada pela visita.
+      images:
+        - alt: >
+            Foto pessoal que mostra apenas meu rosto e uma faixa muito pequena do busto. Sou uma travesti latina com pele morena clara.
+            Não uso maquiagem. Meus olhos tem as íris castanhas escura, quase totalmente pretas. Tenho o cabelo comprido, ondulado,
+            ruivo não natural (nesta foto), penteado com partição do lado direito. Uso óculos com aros em acetato transparente e pernas
+            em acetato rosa pastel. Uso brincos de argolas em formato de coração, mas apenas o brinco do lado direito está à mostra.
+            Estou usando um vestido roxo florido, porém só uma pequena faixa aparece na foto. O fundo é ignorável.
+          url: "images/profile.jpeg"
+          title: "Foto pessoal"
+        - alt: >
+            Foto das minhas 3 gatas em cima da minha cama de casal. A cama é forrada por uma colcha branca com impressão de um padrão
+            de silhuetas pretas de gatos. A gata laranja mais à frente é a Kim Petras. Logo atrás, a gata tricolor deitada é a Lilith.
+            Ao fundo, deitada de barriga para cima, está a gata escaminha chamada Persephone.
+          url: "images/cats.jpeg"
+          title: "Foto das minhas gatas"
   socialIcons:
     - name: Github
       url: "https://github.com/bitbanshee"
@@ -146,8 +132,8 @@ markup:
           enable: true
         superscript:
           enable: true
-    renderer:
-      unsafe: true
+    # renderer:
+    #   unsafe: true
     parser:
       attribute:
         block: true

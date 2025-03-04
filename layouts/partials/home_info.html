@@ -1,0 +1,54 @@
+{{- with site.Params.homeInfoParams }}
+<article class="first-entry home-info">
+    <header class="entry-header">
+        <h1>{{ .Title | markdownify }}</h1>
+    </header>
+    {{- with .Content }}
+    <div class="entry-content">
+        <div class="home-content-grid">
+            {{- with .images }}
+            <div class="image-grid">
+                {{- range $index, $image := . }}
+                <div class="home-image">
+                {{- if $image.url -}}
+                {{- $img := "" }}
+                {{- if not (urls.Parse $image.url).IsAbs }}
+                    {{- $img = resources.Get $image.url }}
+                {{- end }}
+                {{- if $img }}
+                    {{- $processableFormats := (slice "jpg" "jpeg" "png" "tif" "bmp" "gif") -}}
+                    {{- if hugo.IsExtended -}}
+                        {{- $processableFormats = $processableFormats | append "webp" -}}
+                    {{- end -}}
+                    {{- $prod := (hugo.IsProduction | or (eq site.Params.env "production")) }}
+                    {{- if and (in $processableFormats $img.MediaType.SubType) (eq $prod true)}}
+                        {{- if (not (and (not $image.height) (not $image.width))) }}
+                            {{- $img = $img.Resize (printf "%dx%d" $image.width $image.height) }}
+                        {{- else if $image.height }}
+                            {{- $img = $img.Resize (printf "x%d" $image.height) }}
+                        {{ else if $image.width }}
+                            {{- $img = $img.Resize (printf "%dx" $image.width) }}
+                        {{- end }}
+                    {{- end }}
+                    <img draggable="false" src="{{ $img.Permalink }}" alt="{{ $image.alt | default "profile image" }}" title="{{ $image.title }}"/>
+                {{- else }}
+                    <img draggable="false" src="{{ $image.url | absURL }}" alt="{{ $image.alt | default "profile image" }}" title="{{ $image.title }}"/>
+                {{- end }}
+                {{- end }}
+                </div>
+                {{- end}}
+            </div>
+            {{- end }}
+            {{- with .text }}
+            <div class="text-grid">
+                {{ . | markdownify }}
+            </div>
+            {{- end }}
+        </div>
+    </div>
+    {{- end }}
+    <footer class="entry-footer">
+        {{ partial "social_icons.html" (dict "align" site.Params.homeInfoParams.AlignSocialIconsTo) }}
+    </footer>
+</article>
+{{- end -}}
