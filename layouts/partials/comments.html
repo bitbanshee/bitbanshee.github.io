@@ -1,0 +1,28 @@
+<div id="remark42"></div>
+<script>
+    theme = 'light';
+    if ('matchMedia' in window) {
+        var mq = window.matchMedia('(prefers-color-scheme: dark)');
+        function getMQTheme() {
+            return mq.matches ? 'dark' : 'light';
+        }
+        theme = getMQTheme();
+        mq.addListener(function () {
+          REMARK42.changeTheme(mq.matches ? 'dark' : 'light');
+        });
+    }
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (!window.REMARK42) return;
+        if (document.body.className.includes("dark")) {
+            window.REMARK42.changeTheme("light");
+        } else {
+            window.REMARK42.changeTheme("dark");
+        }
+    })
+	var remark_config = {
+		host: "https://remark42.bitbanshee.dev",
+		site_id: "bitbanshee",
+        theme: theme
+	}
+</script>
+<script>!function(e,n){for(var o=0;o<e.length;o++){var r=n.createElement("script"),c=".js",d=n.head||n.body;r.id="remark42_injected_script";"noModule"in r?(r.type="module",c=".mjs"):r.async=!0,r.defer=!0,r.src=remark_config.host+"/web/"+e[o]+c,d.appendChild(r)}}(remark_config.components||["embed"],document);</script>

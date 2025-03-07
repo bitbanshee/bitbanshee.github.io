@@ -37,10 +37,10 @@ menu:
       name: tags
       url: tags/
       weight: 3
-    - identifier: categories
-      name: categorias
-      url: categories/
-      weight: 4
+    # - identifier: categories
+    #   name: categorias
+    #   url: categories/
+    #   weight: 4
 params:
   env: production
   title: bitbanshee
@@ -50,6 +50,8 @@ params:
   author:
     - Sonia
   DateFormat: "02/01/2006"
+  defaultTheme: auto
+  comments: true
   ShowReadingTime: true
   # ShowShareButtons: true
   ShowPostNavLinks: true
